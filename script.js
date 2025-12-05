@@ -117,7 +117,7 @@ const session1 = {
                 '"hi" "there"',
                 '"hithere"',
                 '"hi there"',
-                '"hi  there"'
+                '"HI There"'
             ],
             correctIndex: 2,
             explanation: "عملگر + بین رشته‌ها آن‌ها را به هم می‌چسباند. در این کد بین a و b یک رشتهٔ شامل یک فاصله \" \" قرار داده شده است، بنابراین خروجی دقیقاً \"hi there\" (با یک فاصله بین hi و there) است."
