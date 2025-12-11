@@ -125,6 +125,133 @@ const session1 = {
     ]
 };
 
+const session2 = {
+    title: "جلسه ۲: شرط ها و متغییر های منطقی True/False",
+    description: "سوال‌های چندگزینه‌ای درباره متغیرهای منطقی، مقایسه‌ها و ساختار if/else در پایتون.",
+    questions: [
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: 'a = "2"\nb = 2\nprint(type(a), type(b))',
+            options: [
+                "<class 'str'> <class 'int'>",
+                "<class 'int'> <class 'str'>",
+                "2 2",
+                "خطای برنامه"
+            ],
+            correctIndex: 0,
+            explanation: "متغیر a با کوتیشن تعریف شده پس نوعش str است، متغیر b بدون کوتیشن پس نوعش int است. تابع type() نوع داده را نشان می‌دهد."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "aa = 2\nbb = 2\nprint(aa == bb)",
+            options: [
+                "2",
+                "False",
+                "True",
+                "4"
+            ],
+            correctIndex: 2,
+            explanation: "عملگر == برابری دو مقدار را بررسی می‌کند. چون هر دو متغیر مقدار 2 دارند، نتیجه True خواهد بود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "d = True\ne = False\nprint(d and e)",
+            options: [
+                "True",
+                "False",
+                "TrueFalse", 
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "عملگر and زمانی True می‌دهد که هر دو طرف True باشند. چون e برابر False است، نتیجه False خواهد بود."
+        },
+        {
+            text: "اگر کاربر عدد 5 را وارد کند، خروجی کد زیر چیست؟",
+            code: 'a = input("عدد وارد کنید:")\na = int(a)\nif a > 3:\n    print("بزرگ")\nelse:\n    print("کوچک")',
+            options: [
+                "کوچک",
+                "بزرگ",
+                "5",
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "کاربر 5 وارد می‌کند، با int() به عدد تبدیل می‌شود. چون 5 > 3 است، شرط if برقرار است و 'بزرگ' چاپ می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "a = 2.0\nprint(type(a))",
+            options: [
+                "<class 'int'>",
+                "<class 'float'>", 
+                "<class 'str'>",
+                "2.0"
+            ],
+            correctIndex: 1,
+            explanation: "چون a با اعشار (2.0) تعریف شده، نوع داده آن float خواهد بود، حتی اگر قسمت اعشارش صفر باشد."
+        },
+        {
+            text: "اگر کاربر علامت '*' و اعداد 3 و 4 را وارد کند، خروجی چیست؟",
+            code: 'a = int(input("عدد اول:"))\no = input("عملگر:")\nb = int(input("عدد دوم:"))\nif o == "*":\n    print(a * b)\nelif o == "+":\n    print(a + b)\nelse:\n    print("نامشخص")',
+            options: [
+                "12",
+                "7",
+                "نامشخص",
+                "3*4"
+            ],
+            correctIndex: 0,
+            explanation: "کاربر * وارد می‌کند که با شرط اول (o == '*') مطابقت دارد، پس a * b یعنی 3 * 4 = 12 چاپ می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "x = 5\ny = 10\nprint(x < y and y > 8)",
+            options: [
+                "False",
+                "True",
+                "5 10",
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "x < y یعنی 5 < 10 که True است. y > 8 یعنی 10 > 8 که True است. True and True برابر True است."
+        },
+        {
+            text: "اگر کاربر عدد 2 را وارد کند، خروجی کد زیر چیست؟",
+            code: 'num = int(input("عدد:"))\nif num > 5:\n    print("A")\nelif num > 2:\n    print("B")\nelse:\n    print("C")',
+            options: [
+                "A",
+                "B", 
+                "C",
+                "خطا"
+            ],
+            correctIndex: 2,
+            explanation: "کاربر 2 وارد می‌کند. 2 > 5 نادرست است. 2 > 2 نیز نادرست است. پس به else می‌رود و 'C' چاپ می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "result = True or False\nprint(result)",
+            options: [
+                "True",
+                "False", 
+                "TrueFalse",
+                "None"
+            ],
+            correctIndex: 0,
+            explanation: "عملگر or زمانی True می‌دهد که حداقل یکی از طرف‌ها True باشد. چون طرف اول True است، نتیجه True خواهد بود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: 'a = "5"\nb = 5\nprint(a == b)',
+            options: [
+                "True",
+                "False",
+                "5",
+                '"5"'
+            ],
+            correctIndex: 1,
+            explanation: "متغیر a رشته \"5\" است و b عدد 5 است. چون نوع داده‌هایشان متفاوت است، مقایسه == نتیجه False می‌دهد."
+        }
+    ]
+};
+
 function renderSession(sessionData) {
     const titleEl = document.getElementById("session-title");
     const container = document.getElementById("questions-container");
@@ -211,6 +338,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const sessionId = btn.dataset.session;
             if (sessionId === "1") {
                 renderSession(session1);
+            } else if (sessionId === "2") {
+                renderSession(session2);
             }
         });
     });
