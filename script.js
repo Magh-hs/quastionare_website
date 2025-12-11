@@ -215,15 +215,15 @@ const session2 = {
         },
         {
             text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
-            code: "result = True or False\nprint(result)",
+            code: "result = true \nprint(result)",
             options: [
                 "True",
                 "False", 
                 "TrueFalse",
-                "None"
+                "خطای برنامه (Error)"
             ],
-            correctIndex: 0,
-            explanation: "عملگر or زمانی True می‌دهد که حداقل یکی از طرف‌ها True باشد. چون طرف اول True است، نتیجه True خواهد بود."
+            correctIndex: 3,
+            explanation: "در پایتون، مقادیر منطقی باید با حرف بزرگ نوشته شوند (True/False). چون true با حرف کوچک نوشته شده، پایتون آن را به عنوان متغیر تعریف نشده تشخیص می‌دهد و خطای NameError می‌دهد."
         },
         {
             text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
