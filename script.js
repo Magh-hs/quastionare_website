@@ -131,15 +131,15 @@ const session2 = {
     questions: [
         {
             text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
-            code: 'a = "2"\nb = 2\nprint(type(a), type(b))',
+            code: 'a = "2"\nb = 2\nprint(a == b)',
             options: [
-                "<class 'str'> <class 'int'>",
-                "<class 'int'> <class 'str'>",
+                "False",
+                "True",
                 "2 2",
                 "خطای برنامه"
             ],
             correctIndex: 0,
-            explanation: "متغیر a با کوتیشن تعریف شده پس نوعش str است، متغیر b بدون کوتیشن پس نوعش int است. تابع type() نوع داده را نشان می‌دهد."
+            explanation: "متغیر a رشته \"2\" است و b عدد 2 است. چون نوع داده‌هایشان متفاوت است (یکی str و دیگری int)، مقایسه == نتیجه False می‌دهد."
         },
         {
             text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
@@ -155,15 +155,15 @@ const session2 = {
         },
         {
             text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
-            code: "d = True\ne = False\nprint(d and e)",
+            code: "d = 'True'\ne = 'False'\nprint(d + e)",
             options: [
                 "True",
                 "False",
                 "TrueFalse", 
                 "خطا"
             ],
-            correctIndex: 1,
-            explanation: "عملگر and زمانی True می‌دهد که هر دو طرف True باشند. چون e برابر False است، نتیجه False خواهد بود."
+            correctIndex: 2,
+            explanation: "متغیر d رشته 'True' است و e رشته 'False' است. عملگر + بین رشته‌ها آن‌ها را به هم می‌چسباند، پس خروجی 'TrueFalse' خواهد بود."
         },
         {
             text: "اگر کاربر عدد 5 را وارد کند، خروجی کد زیر چیست؟",
@@ -176,18 +176,6 @@ const session2 = {
             ],
             correctIndex: 1,
             explanation: "کاربر 5 وارد می‌کند، با int() به عدد تبدیل می‌شود. چون 5 > 3 است، شرط if برقرار است و 'بزرگ' چاپ می‌شود."
-        },
-        {
-            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
-            code: "a = 2.0\nprint(type(a))",
-            options: [
-                "<class 'int'>",
-                "<class 'float'>", 
-                "<class 'str'>",
-                "2.0"
-            ],
-            correctIndex: 1,
-            explanation: "چون a با اعشار (2.0) تعریف شده، نوع داده آن float خواهد بود، حتی اگر قسمت اعشارش صفر باشد."
         },
         {
             text: "اگر کاربر علامت '*' و اعداد 3 و 4 را وارد کند، خروجی چیست؟",
@@ -203,7 +191,7 @@ const session2 = {
         },
         {
             text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
-            code: "x = 5\ny = 10\nprint(x < y and y > 8)",
+            code: "x = 5\ny = 10\nprint(x < y)",
             options: [
                 "False",
                 "True",
@@ -211,7 +199,7 @@ const session2 = {
                 "خطا"
             ],
             correctIndex: 1,
-            explanation: "x < y یعنی 5 < 10 که True است. y > 8 یعنی 10 > 8 که True است. True and True برابر True است."
+            explanation: "مقایسه x < y یعنی 5 < 10 که درست است، بنابراین نتیجه True خواهد بود."
         },
         {
             text: "اگر کاربر عدد 2 را وارد کند، خروجی کد زیر چیست؟",
