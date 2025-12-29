@@ -240,6 +240,109 @@ const session2 = {
     ]
 };
 
+const session3 = {
+    title: "جلسه ۳: ادامه شرط ها و متغییر های منطقی",
+    description: "سوال‌های چندگزینه‌ای درباره عملگرهای منطقی، مقایسه‌های پیچیده‌تر و ساختارهای شرطی پیشرفته در پایتون.",
+    questions: [
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: 'a = 5\nb = 3\nprint(a == b)',
+            options: [
+                "False",
+                "True", 
+                "5 3",
+                "خطای برنامه"
+            ],
+            correctIndex: 0,
+            explanation: "عملگر == برابری را بررسی می‌کند. چون 5 برابر با 3 نیست، نتیجه False خواهد بود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "x = 10\ny = 10\nprint(x >= y)",
+            options: [
+                "10",
+                "False",
+                "True",
+                "20"
+            ],
+            correctIndex: 2,
+            explanation: "عملگر >= بزرگتر یا مساوی بودن را بررسی می‌کند. چون 10 مساوی 10 است، شرط برقرار است و نتیجه True می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "result = True + \"False\" \nprint(result)",
+            options: [
+                "True",
+                "False",
+                "TrueFalse", 
+                "خطا"
+            ],
+            correctIndex: 3,
+            explanation: "در این کد، تلاش می‌کنیم یک عدد (True) را با یک رشته ('False') جمع کنیم که باعث خطا می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "flag = 1==2\nprint(flag)",
+            options: [
+                "False",
+                "True",
+                "1==2",
+                "خطا"
+            ],
+            correctIndex: 0,
+            explanation: "عبارت 1==2 برابر False است، چون 1 برابر 2 نیست."
+        },
+        {
+            text: "اگر کاربر عدد 15 را وارد کند، خروجی کد زیر چیست؟",
+            code: 'age = int(input("سن:"))\nif age < 13:\n    print("کودک")\nelif age < 20:\n    print("نوجوان")\nelif age < 60:\n    print("بزرگسال")\nelse:\n    print("سالمند")',
+            options: [
+                "کودک",
+                "نوجوان", 
+                "بزرگسال",
+                "سالمند"
+            ],
+            correctIndex: 1,
+            explanation: "کاربر 15 وارد می‌کند. 15 < 13 نادرست است. 15 < 20 درست است، پس شرط elif اول برقرار می‌شود و 'نوجوان' چاپ می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: 'name = ""\nif name:\n    print("نام وارد شده")\nelse:\n    print("نام خالی")',
+            options: [
+                "نام وارد شده",
+                "نام خالی",
+                '""',
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "در پایتون، رشته خالی \"\" به عنوان False در نظر گرفته می‌شود. بنابراین شرط if برقرار نمی‌شود و 'نام خالی' چاپ می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "score = 85\ngrade = 'A' if score >= 90 else 'B'\nprint(grade)",
+            options: [
+                "A",
+                "B",
+                "85",
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "این یک عبارت شرطی سه‌گانه (ternary) است. چون score (85) کمتر از 90 است، شرط نادرست است و مقدار 'B' به grade تخصیص داده می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: 'a = 0\nif a:\n    print("صفر نیست")\nelse:\n    print("صفر است")',
+            options: [
+                "صفر نیست",
+                "صفر است",
+                "0",
+                "False"
+            ],
+            correctIndex: 1,
+            explanation: "در پایتون، عدد صفر (0) به عنوان False در نظر گرفته می‌شود. بنابراین شرط if برقرار نمی‌شود و 'صفر است' چاپ می‌شود."
+        }
+    ]
+};
+
 function renderSession(sessionData) {
     const titleEl = document.getElementById("session-title");
     const container = document.getElementById("questions-container");
@@ -328,6 +431,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 renderSession(session1);
             } else if (sessionId === "2") {
                 renderSession(session2);
+            } else if (sessionId === "3") {
+                renderSession(session3);
             }
         });
     });
