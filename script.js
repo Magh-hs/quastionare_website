@@ -343,6 +343,363 @@ const session3 = {
     ]
 };
 
+const session4 = {
+    title: "جلسه ۴: حلقه for",
+    description: "سوال‌های چندگزینه‌ای درباره حلقه for و تابع range در پایتون.",
+    questions: [
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "for i in range(3):\n    print(i)",
+            options: [
+                "0 1 2",
+                "1 2 3", 
+                "0 1 2 3",
+                "1 2"
+            ],
+            correctIndex: 0,
+            explanation: "تابع range(3) اعداد 0, 1, 2 را تولید می‌کند. حلقه for روی این اعداد اجرا می‌شود و هر عدد چاپ می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "for i in range(1, 4):\n    print(i)",
+            options: [
+                "1 2 3 4",
+                "1 2 3",
+                "0 1 2 3",
+                "2 3 4"
+            ],
+            correctIndex: 1,
+            explanation: "تابع range(1, 4) اعداد از 1 تا قبل از 4 را تولید می‌کند، یعنی 1, 2, 3."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "for i in range(0, 6, 2):\n    print(i)",
+            options: [
+                "0 2 4 6",
+                "2 4 6",
+                "0 2 4",
+                "1 3 5"
+            ],
+            correctIndex: 2,
+            explanation: "تابع range(0, 6, 2) از 0 شروع می‌شود، تا قبل از 6 ادامه دارد و با گام 2 پیش می‌رود: 0, 2, 4."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "count = 0\nfor i in range(3):\n    count = count + 1\nprint(count)",
+            options: [
+                "0",
+                "3",
+                "2",
+                "4"
+            ],
+            correctIndex: 1,
+            explanation: "حلقه 3 بار اجرا می‌شود (برای i=0, 1, 2). هر بار count یک واحد اضافه می‌شود، پس از 0 به 3 می‌رسد."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "for i in range(3, 0, -1):\n    print(i)",
+            options: [
+                "3 2 1 0",
+                "3 2 1",
+                "2 1 0",
+                "1 0 -1"
+            ],
+            correctIndex: 1,
+            explanation: "range(3, 0, -1) از 3 شروع می‌شود، تا قبل از 0 ادامه دارد و با گام -1 (معکوس) پیش می‌رود: 3, 2, 1."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "total = 0\nfor i in range(1, 4):\n    total = total + i\nprint(total)",
+            options: [
+                "6",
+                "3",
+                "4",
+                "10"
+            ],
+            correctIndex: 0,
+            explanation: "حلقه روی اعداد 1, 2, 3 اجرا می‌شود. total = 0+1+2+3 = 6."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "for i in range(5):\n    if i == 2:\n        break\n    print(i)",
+            options: [
+                "0 1 2",
+                "0 1",
+                "0 1 2 3 4",
+                "2"
+            ],
+            correctIndex: 1,
+            explanation: "وقتی i برابر 2 شود، دستور break اجرا شده و حلقه متوقف می‌شود. فقط 0 و 1 چاپ می‌شوند."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "for i in range(3):\n    if i == 1:\n        continue\n    print(i)",
+            options: [
+                "0 1 2",
+                "0 2",
+                "1 2",
+                "0 1"
+            ],
+            correctIndex: 1,
+            explanation: "وقتی i برابر 1 شود، continue باعث می‌شود به تکرار بعدی برویم و print(i) اجرا نشود. پس فقط 0 و 2 چاپ می‌شوند."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "text = ''\nfor i in range(3):\n    text = text + 'a'\nprint(text)",
+            options: [
+                "a",
+                "aaa",
+                "aa",
+                "''"
+            ],
+            correctIndex: 1,
+            explanation: "حلقه 3 بار اجرا می‌شود و هر بار یک 'a' به text اضافه می‌شود. نتیجه نهایی 'aaa' است."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "numbers = [10, 20, 30]\ntotal = 0\nfor num in numbers:\n    total = total + num\nprint(total)",
+            options: [
+                "10",
+                "20",
+                "60",
+                "30"
+            ],
+            correctIndex: 2,
+            explanation: "حلقه روی لیست numbers اجرا می‌شود و تمام اعداد جمع می‌شوند: 10 + 20 + 30 = 60."
+        }
+    ]
+};
+
+const session5 = {
+    title: "جلسه ۵: لیست‌ها (Lists)",
+    description: "سوال‌های چندگزینه‌ای درباره کار با لیست‌ها در پایتون.",
+    questions: [
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "numbers = [1, 2, 3]\nnumbers.append(4)\nprint(numbers)",
+            options: [
+                "[1, 2, 3]",
+                "[1, 2, 3, 4]",
+                "[4, 1, 2, 3]",
+                "[1, 4, 2, 3]"
+            ],
+            correctIndex: 1,
+            explanation: "متد append یک عنصر به انتهای لیست اضافه می‌کند. لیست از [1, 2, 3] به [1, 2, 3, 4] تبدیل می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "fruits = ['apple', 'banana']\nfruits.insert(1, 'orange')\nprint(fruits)",
+            options: [
+                "['apple', 'banana', 'orange']",
+                "['apple', 'orange', 'banana']",
+                "['orange', 'apple', 'banana']",
+                "['banana', 'orange', 'apple']"
+            ],
+            correctIndex: 1,
+            explanation: "متد insert در ایندکس 1 (موقعیت دوم) عنصر 'orange' را插入 می‌کند. پس لیست به ['apple', 'orange', 'banana'] تبدیل می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "numbers = [10, 20, 30, 40]\nnumbers.remove(20)\nprint(numbers)",
+            options: [
+                "[10, 30, 40]",
+                "[20, 30, 40]",
+                "[10, 20, 40]",
+                "[10, 20, 30]"
+            ],
+            correctIndex: 0,
+            explanation: "متد remove اولین عنصری که با مقدار داده شده مطابقت دارد را حذف می‌کند. عنصر 20 حذف شده و لیست به [10, 30, 40] تبدیل می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "colors = ['red', 'green', 'blue']\nresult = colors.pop(1)\nprint(result)",
+            options: [
+                "'red'",
+                "'green'",
+                "'blue'",
+                "['red', 'blue']"
+            ],
+            correctIndex: 1,
+            explanation: "متد pop عنصر در ایندکس 1 را برمی‌گرداند و حذف می‌کند. عنصر در ایندکس 1 'green' است که چاپ می‌شود."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "numbers = [5, 10, 15]\nprint(numbers[1])",
+            options: [
+                "5",
+                "10",
+                "15",
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "ایندکس‌ها در پایتون از 0 شروع می‌شوند. numbers[1] عنصر دوم لیست را برمی‌گرداند که 10 است."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "items = []\nitems.append('a')\nitems.append('b')\nprint(items)",
+            options: [
+                "[]",
+                "['a']",
+                "['a', 'b']",
+                "['b', 'a']"
+            ],
+            correctIndex: 2,
+            explanation: "لیست خالی با دو عنصر 'a' و 'b' پر می‌شود. نتیجه نهایی ['a', 'b'] است."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "numbers = [1, 2, 3, 4]\nnumbers[0] = 10\nprint(numbers[0])",
+            options: [
+                "1",
+                "2",
+                "10",
+                "4"
+            ],
+            correctIndex: 2,
+            explanation: "می‌توانیم با استفاده از ایندکس، مقدار یک عنصر را تغییر دهیم. numbers[0] = 10 عنصر اول را به 10 تغییر می‌دهد."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "fruits = ['apple', 'banana', 'orange']\nfor fruit in fruits:\n    print(fruit)",
+            options: [
+                "apple banana orange",
+                "a b o",
+                "['apple', 'banana', 'orange']",
+                "apple"
+            ],
+            correctIndex: 0,
+            explanation: "حلقه روی هر میوه اجرا می‌شود و هر میوه به طور کامل چاپ می‌شود: apple، banana، orange."
+        }
+    ]
+};
+
+const session6 = {
+    title: "جلسه ۶: دیکشنری‌ها (Dictionaries)",
+    description: "سوال‌های چندگزینه‌ای درباره کار با دیکشنری‌ها در پایتون.",
+    questions: [
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "person = {'name': 'Ali', 'age': 20}\nprint(person['name'])",
+            options: [
+                "'Ali'",
+                "'age'",
+                "20",
+                "خطا"
+            ],
+            correctIndex: 0,
+            explanation: "برای دسترسی به مقدار یک دیکشنری، از کلید داخل براکت استفاده می‌کنیم. person['name'] مقدار 'Ali' را برمی‌گرداند."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "data = {}\ndata['city'] = 'Tehran'\nprint(data)",
+            options: [
+                "{}",
+                "{'city': 'Tehran'}",
+                "'Tehran'",
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "به دیکشنری خالی یک کلید-مقدار اضافه می‌شود و نتیجه {'city': 'Tehran'} است."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "person = {'name': 'Sara', 'age': 25}\nperson['age'] = 26\nprint(person['age'])",
+            options: [
+                "25",
+                "26",
+                "'age'",
+                "'Sara'"
+            ],
+            correctIndex: 1,
+            explanation: "می‌توانیم مقدار یک کلید موجود را با استفاده از همان کلید تغییر دهیم. سن از 25 به 26 تغییر می‌کند."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "scores = {'math': 90, 'science': 85}\nresult = scores.pop('math')\nprint(result)",
+            options: [
+                "90",
+                "85",
+                "'math'",
+                "{'science': 85}"
+            ],
+            correctIndex: 0,
+            explanation: "متد pop مقدار مربوط به کلید را برمی‌گرداند و آن کلید را از دیکشنری حذف می‌کند. مقدار 'math' برابر 90 است."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "person = {'name': 'Reza', 'city': 'Isfahan'}\ndel person['city']\nprint(person)",
+            options: [
+                "{'name': 'Reza'}",
+                "{'city': 'Isfahan'}",
+                "{'name': 'Reza', 'city': 'Isfahan'}",
+                "'Reza'"
+            ],
+            correctIndex: 0,
+            explanation: "دستور del کلید 'city' را از دیکشنری حذف می‌کند و فقط کلید 'name' باقی می‌ماند."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "data = {'a': 1, 'b': 2, 'c': 3}\nfor key in data:\n    print(key)",
+            options: [
+                "1 2 3",
+                "a b c",
+                "a=1 b=2 c=3",
+                "['a', 'b', 'c']"
+            ],
+            correctIndex: 1,
+            explanation: "حلقه for روی دیکشنری به طور پیش‌فرض روی کلیدها اجرا می‌شود، پس کلیدهای 'a'، 'b'، 'c' چاپ می‌شوند."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "person = {'name': 'Mina', 'age': 30}\nprint('age' in person)",
+            options: [
+                "True",
+                "False",
+                "30",
+                "'age'"
+            ],
+            correctIndex: 0,
+            explanation: "عملگر in بررسی می‌کند که آیا کلید در دیکشنری وجود دارد یا نه. چون 'age' یک کلید است، نتیجه True است."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "data = {'x': 10, 'y': 20}\nprint(data.get('x', 0))",
+            options: [
+                "10",
+                "20",
+                "0",
+                "None"
+            ],
+            correctIndex: 0,
+            explanation: "متد get مقدار کلید را برمی‌گرداند. چون 'x' وجود دارد، مقدار 10 برمی‌گردد."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "person = {}\nperson['name'] = 'Kamran'\nprint(person)",
+            options: [
+                "{}",
+                "{'name': 'Kamran'}",
+                "'Kamran'",
+                "خطا"
+            ],
+            correctIndex: 1,
+            explanation: "به دیکشنری خالی یک کلید-مقدار اضافه می‌شود و نتیجه {'name': 'Kamran'} است."
+        },
+        {
+            text: "بعد از اجرای کد زیر چه چیزی چاپ می‌شود؟",
+            code: "scores = {'math': 95, 'physics': 88}\nfor key, value in scores.items():\n    print(key, value)",
+            options: [
+                "math 95 physics 88",
+                "95 88",
+                "math physics",
+                "['math', 'physics']"
+            ],
+            correctIndex: 0,
+            explanation: "متد items() کلید و مقدار را برمی‌گرداند. حلقه هر جفت کلید-مقدار را چاپ می‌کند: math 95 و physics 88."
+        }
+    ]
+};
+
 function renderSession(sessionData) {
     const titleEl = document.getElementById("session-title");
     const container = document.getElementById("questions-container");
@@ -433,6 +790,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 renderSession(session2);
             } else if (sessionId === "3") {
                 renderSession(session3);
+            } else if (sessionId === "4") {
+                renderSession(session4);
+            } else if (sessionId === "5") {
+                renderSession(session5);
+            } else if (sessionId === "6") {
+                renderSession(session6);
             }
         });
     });
